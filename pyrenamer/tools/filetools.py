@@ -259,16 +259,16 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
     pattern = pattern_ini
     newname = pattern_end
 
-    pattern = pattern.replace(".", "\.")
-    pattern = pattern.replace("[", "\[")
-    pattern = pattern.replace("]", "\]")
-    pattern = pattern.replace("(", "\(")
-    pattern = pattern.replace(")", "\)")
-    pattern = pattern.replace("?", "\?")
+    pattern = pattern.replace(".", r"\.")
+    pattern = pattern.replace("[", r"\[")
+    pattern = pattern.replace("]", r"\]")
+    pattern = pattern.replace("(", r"\(")
+    pattern = pattern.replace(")", r"\)")
+    pattern = pattern.replace("?", r"\?")
     pattern = pattern.replace("{#}", "([0-9]*)")
     pattern = pattern.replace("{L}", "([a-zA-Z]*)")
-    pattern = pattern.replace("{C}", "([\S]*)")
-    pattern = pattern.replace("{X}", "([\S\s]*)")
+    pattern = pattern.replace("{C}", r"([\S]*)")
+    pattern = pattern.replace("{X}", r"([\S\s]*)")
     pattern = pattern.replace("{@}", "(.*)")
 
     try:
@@ -289,7 +289,7 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
     # If {num2} the number will be 02
     # If {num3+10} the number will be 010
     count = repr(count)
-    cr = re.compile("{(num)([0-9]*)}|{(num)([0-9]*)(\+)([0-9]*)}")
+    cr = re.compile(r"{(num)([0-9]*)}|{(num)([0-9]*)(\+)([0-9]*)}")
     try:
         cg = cr.search(newname).groups()
         if len(cg) == 6:
@@ -387,10 +387,10 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
     # ie. {rand20,5} will be a number between 0 and 20 of 5 digits (00012)
     rnd = ""
     cr = re.compile(
-        "{(rand)([0-9]*)}"
-        "|{(rand)([0-9]*)(\-)([0-9]*)}"
-        "|{(rand)([0-9]*)(\,)([0-9]*)}"
-        "|{(rand)([0-9]*)(\-)([0-9]*)(\,)([0-9]*)}"
+        r"{(rand)([0-9]*)}"
+        r"|{(rand)([0-9]*)(\-)([0-9]*)}"
+        r"|{(rand)([0-9]*)(\,)([0-9]*)}"
+        r"|{(rand)([0-9]*)(\-)([0-9]*)(\,)([0-9]*)}"
     )
     try:
         cg = cr.search(newname).groups()

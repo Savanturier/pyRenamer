@@ -63,6 +63,7 @@ class Preferences:
             'prefs_close'
             ]
         self.builder = Gtk.Builder()
+        self.builder.set_translation_domain("pyrenamer")
         self.builder.add_objects_from_file(glade_file, gui_objects)
 
         # Signals

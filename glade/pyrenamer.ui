@@ -1975,7 +1975,6 @@ ____ to _
           <object class="GtkAction" id="view1">
             <property name="name">view1</property>
             <property name="label" translatable="yes">_View</property>
-            <signal handler="on_view1_activate" name="activate"/>
           </object>
         </child>
         <child>

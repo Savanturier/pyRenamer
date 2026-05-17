@@ -119,6 +119,7 @@ class PyrenamerPatternEditor:
         # Create the window
         gui_objects=['pattern_edit_window', 'pattern_edit_treeview']
         self.builder = Gtk.Builder()
+        self.builder.set_translation_domain("pyrenamer")
         self.builder.add_objects_from_file(self.glade_file, gui_objects)
 
         # Signals

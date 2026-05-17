@@ -54,8 +54,20 @@ from os import path as ospath
 from os.path import dirname
 import locale
 import gettext
-from gettext import gettext as _
 
+APP = "pyrenamer"
+LOCALE_DIR = "/usr/local/share/locale"
+
+try:
+    locale.setlocale(locale.LC_ALL, "")
+except locale.Error:
+    pass
+
+gettext.bindtextdomain(APP, LOCALE_DIR)
+gettext.textdomain(APP)
+gettext.install(APP, LOCALE_DIR)
+
+_ = gettext.gettext
 
 # Local Imports
 from gui import preferences
@@ -152,6 +164,7 @@ class pyRenamer:
         ]
 
         self.builder = Gtk.Builder()
+        self.builder.set_translation_domain("pyrenamer")
         self.builder.add_objects_from_file(self.glade_file, gui_objects)
         self.initialize_defaults()
         if root_dir != None:
@@ -262,6 +275,7 @@ class pyRenamer:
         # Init main window
         self.builder.get_object("main_window").set_title("pyRenamer")
         self.builder.get_object("main_window").set_icon_from_file(self.icon)
+        self.builder.get_object("main_window").maximize()
 
         # Init TreeFileBrowser
         self.file_browser = treefilebrowser.TreeFileBrowser(self.root_dir)
@@ -346,12 +360,12 @@ class pyRenamer:
         # self.selected_files.append_column(column0)
 
         renderer0 = Gtk.CellRendererText()
-        column0 = Gtk.TreeViewColumn("Original File Name", renderer0, text=0)
+        column0 = Gtk.TreeViewColumn("Nom du fichier d'origine", renderer0, text=0)
         column0.set_resizable(True)
         self.selected_files.append_column(column0)
 
         renderer1 = Gtk.CellRendererText()
-        column1 = Gtk.TreeViewColumn("Renamed File Name", renderer1, text=2)
+        column1 = Gtk.TreeViewColumn("Nom du fichier renommé", renderer1, text=2)
         column1.set_resizable(True)
         self.column_preview = column1
         self.selected_files.append_column(column1)
@@ -580,7 +594,6 @@ class pyRenamer:
         if event.changed_mask & Gdk.WindowState.MAXIMIZED:
             if event.new_window_state & Gdk.WindowState.MAXIMIZED:
                 self.window_maximized = True
-                self.builder.get_object("main_window").set_has_resize_grip(False)
             else:
                 self.window_maximized = False
                 self.builder.get_object("main_window").set_has_resize_grip(True)
@@ -1173,8 +1186,9 @@ class pyRenamer:
                 self.listing_thread.join()
 
         self.stop_button.hide()
-        for i in self.populate_id:
-            removed = GLib.source_remove(i)
+        for i in self.populate_id[:]:
+            if GLib.main_context_default().find_source_by_id(i) is not None:
+                GLib.source_remove(i)
             self.populate_id.remove(i)
 
             self.selected_files.set_model(self.file_selected_model)

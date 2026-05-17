@@ -1,0 +1,956 @@
+diff --git a/glade/pyrenamer.ui b/glade/pyrenamer.ui
+index ae02f54..328bb0e 100755
+--- a/glade/pyrenamer.ui
++++ b/glade/pyrenamer.ui
+@@ -1975,7 +1975,6 @@ ____ to _
+           <object class="GtkAction" id="view1">
+             <property name="name">view1</property>
+             <property name="label" translatable="yes">_View</property>
+-            <signal handler="on_view1_activate" name="activate"/>
+           </object>
+         </child>
+         <child>
+diff --git a/po/fr.po b/po/fr.po
+new file mode 100644
+index 0000000..7ff174d
+--- /dev/null
++++ b/po/fr.po
+@@ -0,0 +1,784 @@
++# French translations for pyrenamer package.
++# Copyright (C) 2007 THE pyrenamer'S COPYRIGHT HOLDER
++# This file is distributed under the same license as the pyrenamer package.
++# Adolfo González Blázquez <code@infinicode.org>, 2007.
++# Fork of pyRenamer for Python3 by
++# Thomas Freeman <tfree87@users.noreply.github.com>, 2016.
++# French translation update and GTK gettext fixes by
++# Savanturier <155858384+Savanturier@users.noreply.github.com>, 2026.
++#
++msgid ""
++msgstr ""
++"Project-Id-Version: pyRenamer Python3\n"
++"POT-Creation-Date: 2026-05-17 17:00+0200\n"
++"PO-Revision-Date: 2026-05-17 17:00+0200\n"
++"Last-Translator: Savanturier\n"
++"Language-Team: French\n"
++"Language: fr\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++"Plural-Forms: nplurals=2; plural=(n > 1);\n"
++
++#: pyrenamer/treefilebrowser/treefilebrowser.py:410
++msgid "Show hidden files"
++msgstr "Afficher les fichiers cachés"
++
++#: pyrenamer/gui/preferences.py:89
++msgid "Select root directory"
++msgstr "Sélectionnez le répertoire racine"
++
++#: pyrenamer/gui/preferences.py:106
++msgid "Select active directory"
++msgstr "Sélectionnez le répertoire actif"
++
++#: pyrenamer/gui/preferences.py:128 pyrenamer/gui/preferences.py:155
++msgid ""
++"\n"
++"The root directory is not valid!\n"
++"Please select another directory."
++msgstr ""
++"\n"
++"Le répertoire racine choisi n'est pas valide !\n"
++"Veuillez sélectionner un autre répertoire."
++
++#: pyrenamer/gui/preferences.py:131 pyrenamer/gui/preferences.py:160
++msgid ""
++"\n"
++"The active directory is not valid!\n"
++"Please select another directory."
++msgstr ""
++"\n"
++"Le répertoire actif choisi n'est pas valide !\n"
++"Veuillez sélectionner un autre répertoire."
++
++#: pyrenamer/gui/preferences.py:141 pyrenamer/gui/preferences.py:169
++msgid ""
++"\n"
++"Please set both directories!"
++msgstr ""
++"\n"
++"Veuillez sélectionner les deux répertoires !"
++
++#: pyrenamer/gui/pattern_editor.py:144
++msgid "Patterns editor"
++msgstr "Éditeur de règles"
++
++#: pyrenamer/gui/pattern_editor.py:147
++msgid "Image patterns editor"
++msgstr "Éditeur de règles pour les images"
++
++#: pyrenamer/gui/pattern_editor.py:150
++msgid "Music patterns editor"
++msgstr "Éditeur de règles pour la musique"
++
++#: pyrenamer/tools/filetools.py:470
++#, python-format
++msgid "Error while renaming %s to %s! -> %s already exists!"
++msgstr "Erreur au renommage %s en %s ! -> %s existe déjà !"
++
++#: pyrenamer/tools/filetools.py:480
++#, python-format
++msgid "Error while renaming %s to %s!"
++msgstr "Erreur au renommage %s en %s !"
++
++#: pyrenamer/pyrenamer.py:383
++#, python-format
++msgid ""
++"Could not rename file %s to %s\n"
++"%s"
++msgstr ""
++"Le fichier n'a pas pu être renommé de %s en %s\n"
++"%s"
++
++#: pyrenamer/pyrenamer.py:1114
++msgid "Select file"
++msgstr "Sélectionner fichier"
++
++#: pyrenamer/pyrenamer.py:1175
++#, python-format
++msgid "Reading contents of dir %s"
++msgstr "Parcoure le contenu du répertoire %s"
++
++#: pyrenamer/pyrenamer.py:1251
++#, python-format
++msgid "Adding file %s"
++msgstr "Ajout des fichiers %s"
++
++#: pyrenamer/pyrenamer.py:1260
++#, python-format
++msgid "Directory: %s - Files: %s"
++msgstr "Répertoires : %s - Fichiers : %s"
++
++#: pyrenamer/pyrenamer.py:1349
++msgid "Ignore errors"
++msgstr "Ignorer les erreurs"
++
++#: pyrenamer/pyrenamer.py:1362
++msgid "translator-credits"
++msgstr "Christophe Perez <christophe.perez.moure@gmail.com>"
++
++#: glade/pyrenamer.ui:9
++msgid "Add pattern"
++msgstr "Ajouter une règle"
++
++#: glade/pyrenamer.ui:71
++msgid "Pattern:"
++msgstr "Règle :"
++
++#: glade/pyrenamer.ui:133
++msgid "Files"
++msgstr "Fichiers"
++
++#: glade/pyrenamer.ui:136
++msgid "Directories"
++msgstr "Répertoires"
++
++#: glade/pyrenamer.ui:139
++msgid "Files and directories"
++msgstr "Fichiers et répertoires"
++
++#: glade/pyrenamer.ui:150
++msgid "Spaces to Underscores"
++msgstr "Espaces en tirets bas"
++
++#: glade/pyrenamer.ui:153
++msgid "Underscores to Spaces"
++msgstr "Tirets bas en espaces"
++
++#: glade/pyrenamer.ui:156
++msgid "Spaces to Dots"
++msgstr "Espaces en points"
++
++#: glade/pyrenamer.ui:159
++msgid "Dots to Spaces"
++msgstr "Points en espaces"
++
++#: glade/pyrenamer.ui:162
++msgid "Spaces to Dashes"
++msgstr "Espaces en tirets"
++
++#: glade/pyrenamer.ui:165
++msgid "Dashes to Spaces"
++msgstr "Tirets en espaces"
++
++#: glade/pyrenamer.ui:176
++msgid "All uppercase"
++msgstr "Tout en majuscules"
++
++#: glade/pyrenamer.ui:179
++msgid "All downcase"
++msgstr "Tout en minuscules"
++
++#: glade/pyrenamer.ui:182
++msgid "First letter uppercase"
++msgstr "Première lettre en majuscule"
++
++#: glade/pyrenamer.ui:185
++msgid "First letter uppercase of each word"
++msgstr "Première lettre de chaque mot en majuscule"
++
++#: glade/pyrenamer.ui:192
++msgid "pyRenamer"
++msgstr "pyRenamer"
++
++#: glade/pyrenamer.ui:240
++msgid "File Browser"
++msgstr "Navigateur de fichiers"
++
++#: glade/pyrenamer.ui:272
++msgid "Rename Preview"
++msgstr "Aperçu du renommage"
++
++#: glade/pyrenamer.ui:314
++msgid "<b>Options</b>"
++msgstr "<b>Options</b>"
++
++#: glade/pyrenamer.ui:388
++msgid "Selection pattern"
++msgstr "Règle de sélection des fichiers"
++
++#: glade/pyrenamer.ui:403
++msgid ""
++"*\t\tSelect every visible file\n"
++"*.jpg\tSelect just files that end with the \"jpg\" extension\n"
++"\t\tSelect every file (including hidden ones)\n"
++".*\t\tSelect files starting by \".\""
++msgstr ""
++"*\t\tSélectionner tout fichier visible\n"
++"*.jpg\tSélectionner les fichiers portant l'extension \"jpg\"\n"
++"\t\tSélectionner tous les fichers (cachés compris)\n"
++".*\t\tSélectionner les fichiers commençant par \".\""
++
++#: glade/pyrenamer.ui:407
++msgid "*"
++msgstr "*"
++
++#: glade/pyrenamer.ui:425
++msgid "Add files recursively"
++msgstr "Ajouter les fichiers récursivement"
++
++#: glade/pyrenamer.ui:441
++msgid "Keep extensions"
++msgstr "Garder les extensions"
++
++#: glade/pyrenamer.ui:457
++msgid "Preview automatically"
++msgstr "Aperçu automatique"
++
++#: glade/pyrenamer.ui:518 glade/pyrenamer.ui:560
++msgid "Edit saved patterns"
++msgstr "Modifier les règles enregistrées"
++
++#: glade/pyrenamer.ui:539 glade/pyrenamer.ui:581
++msgid "Save the current pattern"
++msgstr "Enregistrer la règle actuelle"
++
++#: glade/pyrenamer.ui:603
++msgid ""
++"<i>Put the mouse over the text fields to get help on which patterns you can "
++"use</i>"
++msgstr ""
++"<i>Survolez avec la souris les champs de texte pour obtenir de l'aide sur "
++"les règles disponibles</i>"
++
++#: glade/pyrenamer.ui:617
++msgid "<b>Rename files using patterns</b>"
++msgstr "<b>Renommer les fichiers en utilisant des règles</b>"
++
++#: glade/pyrenamer.ui:632
++msgid "Renamed file name pattern"
++msgstr "Règle du nom de fichier renommé"
++
++#: glade/pyrenamer.ui:646
++msgid "Original file name pattern"
++msgstr "Règle du nom de fichier original"
++
++#: glade/pyrenamer.ui:659
++msgid ""
++"{#}\tNumbers\n"
++"{L}\t\tLetters\n"
++"{C}\t\tCharacters (numbers and letters, not spaces)\n"
++"{X}\t\tNumbers, letters, and spaces\n"
++"{@}\tTrash "
++msgstr ""
++"{#}\tChiffres\n"
++"{L}\t\tLettres\n"
++"{C}\tCaractères (chiffres et lettres, pas d'espaces)\n"
++"{X}\t\tChiffres, lettres et espaces\n"
++"{@}\tCorbeille "
++
++#: glade/pyrenamer.ui:686
++msgid ""
++"Use {1} for first catched item. {2} for second, etc...\n"
++"Use {num} for adding 1, 2, 3... to file names\n"
++"Use {num2} for 01, 02, 03.....\n"
++"Use {num3} for 001, 002, 003...\n"
++"Use {num+10} for 10, 11, 12...\n"
++"Use {num2+10} for 010, 011, 012...\n"
++"Use {dir} for getting current dir\n"
++"\n"
++"Some today date replacements:\n"
++"{date}\t\t\t19800222\n"
++"{datedelim}\t\t1980-02-22\n"
++"{year}\t\t\t1980\n"
++"{month}\t\t02\n"
++"{monthname}\tfebruary\n"
++"{monthsimp}\tfeb\n"
++"{day}\t\t\t22\n"
++"{dayname}\t\tfriday\n"
++"{daysimp}\t\tfri\n"
++"\n"
++"* You can prefix these with 'create' or 'modify' to lookup the file "
++"attributes.\n"
++"\n"
++"Random number replacements:\n"
++"{rand} is random number between 0 and 100.\n"
++"{rand,3} is random number between 0 and 100 of 3 digits (012)\n"
++"{rand500} is random number between 0 and 500\n"
++"{rand10-20} is random number between 10 and 20\n"
++"{rand20,5} is random number between 0 and 20 of 5 digits (00012)"
++msgstr ""
++"Utilisez {1} pour le premier élément capturé, {2} pour le second, etc.\n"
++"Utilisez {num} pour ajouter 1, 2, 3… aux noms de fichiers\n"
++"Utilisez {num2} pour 01, 02, 03…\n"
++"Utilisez {num3} pour 001, 002, 003…\n"
++"Utilisez {num+10} pour 10, 11, 12…\n"
++"Utilisez {num2+10} pour 010, 011, 012…\n"
++"Utilisez {dir} pour obtenir le dossier actuel\n"
++"\n"
++"Quelques substitutions avec la date du jour :\n"
++"{date}\t\t\t19800222\n"
++"{datedelim}\t\t1980-02-22\n"
++"{year}\t\t\t1980\n"
++"{month}\t\t02\n"
++"{monthname}\tfévrier\n"
++"{monthsimp}\tfév\n"
++"{day}\t\t\t22\n"
++"{dayname}\t\tvendredi\n"
++"{daysimp}\t\tven\n"
++"\n"
++"* Vous pouvez préfixer ces variables avec « create » ou « modify » pour consulter les attributs du fichier.\n"
++"\n"
++"Substitutions par nombres aléatoires :\n"
++"{rand} est un nombre aléatoire entre 0 et 100.\n"
++"{rand,3} est un nombre aléatoire entre 0 et 100 sur 3 chiffres (012)\n"
++"{rand500} est un nombre aléatoire entre 0 et 500\n"
++"{rand10-20} est un nombre aléatoire entre 10 et 20\n"
++"{rand20,5} est un nombre aléatoire entre 0 et 20 sur 5 chiffres (00012)"
++
++#: glade/pyrenamer.ui:736 glade/pyrenamer.ui:1992
++msgid "Patterns"
++msgstr "Règles"
++
++#: glade/pyrenamer.ui:793
++msgid "with"
++msgstr "par"
++
++#: glade/pyrenamer.ui:823
++msgid "Remove accents"
++msgstr "Effacer accents"
++
++#: glade/pyrenamer.ui:857
++msgid "Capitalization"
++msgstr "Majuscules"
++
++#: glade/pyrenamer.ui:872
++msgid "Replace"
++msgstr "Remplacer"
++
++#: glade/pyrenamer.ui:887
++msgid "Spaces"
++msgstr "Espaces"
++
++#: glade/pyrenamer.ui:904
++msgid "<b>Common substitutions</b>"
++msgstr "<b>Substitutions générales</b>"
++
++#: glade/pyrenamer.ui:916
++msgid "Fix duplicated symbols"
++msgstr "Réparer les symboles dupliqués"
++
++#: glade/pyrenamer.ui:920
++msgid ""
++"Changes:\n"
++"..... to .\n"
++"----  to -\n"
++"____ to _\n"
++"'     ' to  ' '"
++msgstr ""
++"Changements :\n"
++"..... à .\n"
++"----  à -\n"
++"____ à _\n"
++"'     ' à  ' '"
++
++#: glade/pyrenamer.ui:942 glade/pyrenamer.ui:2000
++msgid "Substitutions"
++msgstr "Substitutions"
++
++#: glade/pyrenamer.ui:964
++msgid "Delete from"
++msgstr "Effacer à partir de"
++
++#: glade/pyrenamer.ui:997
++msgid "to"
++msgstr "à"
++
++#: glade/pyrenamer.ui:1029
++msgid "<b>Insert or delete characters from filenames</b>"
++msgstr "<b>Insérer ou effacer des caractères des noms de fichier</b>"
++
++#: glade/pyrenamer.ui:1045
++msgid "Insert"
++msgstr "Insérer"
++
++#: glade/pyrenamer.ui:1075
++msgid "at"
++msgstr "en"
++
++#: glade/pyrenamer.ui:1099
++msgid "or at the end"
++msgstr "ou à la fin"
++
++#: glade/pyrenamer.ui:1128 glade/pyrenamer.ui:2008
++msgid "Insert / Delete"
++msgstr "Insérer / Effacer"
++
++#: glade/pyrenamer.ui:1147
++msgid "<b>Rename files manually</b>"
++msgstr "<b>Renommer les fichiers manuellement</b>"
++
++#: glade/pyrenamer.ui:1174
++msgid "New file name"
++msgstr "Nouveau nom de fichier"
++
++#: glade/pyrenamer.ui:1188
++msgid "<i>Select the file to rename, change its name and click Preview</i>"
++msgstr ""
++"<i>Sélectionnez le fichier à renommer, changez son nom et cliquez sur  "
++"\"Aperçu\"</i>"
++
++#: glade/pyrenamer.ui:1208 glade/pyrenamer.ui:2016
++msgid "Manual rename"
++msgstr "Renommage manuel"
++
++#: glade/pyrenamer.ui:1270 glade/pyrenamer.ui:1861
++msgid "_Preview"
++msgstr "A_perçu"
++
++#: glade/pyrenamer.ui:1325
++msgid "C_lear"
++msgstr "_Vider"
++
++#: glade/pyrenamer.ui:1379 glade/pyrenamer.ui:1870
++msgid "_Rename"
++msgstr "_Renommer"
++
++#: glade/pyrenamer.ui:1448
++msgid "Pattern editor"
++msgstr "Éditeur de règles"
++
++#: glade/pyrenamer.ui:1611
++msgid "pyRenamer preferences"
++msgstr "Préférences de pyRenamer"
++
++#: glade/pyrenamer.ui:1630
++msgid "<b>Default directories</b>"
++msgstr "<b>Répertoires par défaut</b>"
++
++#: glade/pyrenamer.ui:1653
++msgid "<i>The parent of the directories tree</i>"
++msgstr "<i>Le répertoire racine par défaut</i>"
++
++#: glade/pyrenamer.ui:1667
++msgid "<i>The default selected directory</i>"
++msgstr "<i>Le répertoire sélectionné par défaut</i>"
++
++#: glade/pyrenamer.ui:1720 glade/pyrenamer.ui:1772
++msgid "Browse..."
++msgstr "Parcourir..."
++
++#: glade/pyrenamer.ui:1854
++msgid "_File"
++msgstr "_Fichier"
++
++#: glade/pyrenamer.ui:1879
++msgid "_Load names from file..."
++msgstr "Charger _les noms depuis un fichier..."
++
++#: glade/pyrenamer.ui:1888
++msgid "C_lear Preview"
++msgstr "_Vider l'aperçu"
++
++#: glade/pyrenamer.ui:1903
++msgid "_Edit"
++msgstr "É_dition"
++
++#: glade/pyrenamer.ui:1954
++msgid "Select _all"
++msgstr "_Tout sélectionner"
++
++#: glade/pyrenamer.ui:1962
++msgid "Select  _nothing"
++msgstr "_Ne rien sélectionner"
++
++#: glade/pyrenamer.ui:1977
++msgid "_View"
++msgstr "_Affichage"
++
++#: glade/pyrenamer.ui:2025
++msgid "Show options"
++msgstr "Afficher les options"
++
++#: glade/pyrenamer.ui:2033
++msgid "_Help"
++msgstr "Aid_e"
++
++#~ msgid "Mass rename files"
++#~ msgstr "Renomme en masse les fichiers"
++
++#~ msgid "<b>Rename images using their metadata</b>"
++#~ msgstr "<b>Renommer les images d'après leurs métadonnées</b>"
++
++#~ msgid "<b>Rename music using its metadata</b>"
++#~ msgstr "<b>Renommer la musique d'après ses métadonnées</b>"
++
++#~ msgid "Active"
++#~ msgstr "Actif"
++
++#~ msgid ""
++#~ "All uppercase\n"
++#~ "All downcase\n"
++#~ "First letter uppercase\n"
++#~ "First letter uppercase of each word"
++#~ msgstr ""
++#~ "Toutes en majuscules\n"
++#~ "Toutes en minuscules\n"
++#~ "Première en majuscule\n"
++#~ "Première lettre de chaque mot en majuscule"
++
++#~ msgid ""
++#~ "Files\n"
++#~ "Directories\n"
++#~ "Files and directories"
++#~ msgstr ""
++#~ "Fichiers\n"
++#~ "Répertoires\n"
++#~ "Fichiers et répertoires"
++
++#~ msgid ""
++#~ "Image metadata replacements:\n"
++#~ "{imagewidth}\t\t\t640\n"
++#~ "{imageheight}\t\t\t480\n"
++#~ "{cameramaker}\t\t\tNikon\n"
++#~ "{cameramodel}\t\t\tD-50\n"
++#~ "{imagedate}\t\t\t22feb1980\n"
++#~ "{imageyear}\t\t\t1980\n"
++#~ "{imagemonth}\t\t\t02\n"
++#~ "{imagemonthname}\t\tfebruary\n"
++#~ "{imagemonthsimp}\t\tfeb\n"
++#~ "{imageday}\t\t\t\t22\n"
++#~ "{imagedayname}\t\tfriday\n"
++#~ "{imagedaysimp}\t\tfri\n"
++#~ "{imagetime}\t\t\t13_56_02\n"
++#~ "{imagehour}\t\t\t13\n"
++#~ "{imageminute}\t\t\t56\n"
++#~ "{imagesecond}\t\t\t02\n"
++#~ "\n"
++#~ "Common replacements:\n"
++#~ "Use {1} for first catched item. {2} for second, etc...\n"
++#~ "Use {num} for adding 1, 2, 3... to file names\n"
++#~ "Use {num2} for 01, 02, 03.....\n"
++#~ "Use {num3} for 001, 002, 003...\n"
++#~ "Use {num+10} for 10, 11, 12...\n"
++#~ "Use {num2+10} for 010, 011, 012...\n"
++#~ "Use {dir} for getting current dir\n"
++#~ "\n"
++#~ "Some today date replacements:\n"
++#~ "{date}\t\t\t22feb1980\n"
++#~ "{year}\t\t\t1980\n"
++#~ "{month}\t\t02\n"
++#~ "{monthname}\tfebruary\n"
++#~ "{monthsimp}\tfeb\n"
++#~ "{day}\t\t\t22\n"
++#~ "{dayname}\t\tfriday\n"
++#~ "{daysimp}\t\tfri\n"
++#~ "\n"
++#~ "Random number replacements:\n"
++#~ "{rand} is random number between 0 and 100.\n"
++#~ "{rand,3} is random number between 0 and 100 of 3 digits (012)\n"
++#~ "{rand500} is random number between 0 and 500\n"
++#~ "{rand10-20} is random number between 10 and 20\n"
++#~ "{rand20,5} is random number between 0 and 20 of 5 digits (00012)"
++#~ msgstr ""
++#~ "Substitutions par les métadonnées des images:\n"
++#~ "{imagewidth}\t\t\t640\n"
++#~ "{imageheight}\t\t\t480\n"
++#~ "{cameramaker}\t\t\tNikon\n"
++#~ "{cameramodel}\t\t\tD-50\n"
++#~ "{imagedate}\t\t\t22feb1980\n"
++#~ "{imageyear}\t\t\t1980\n"
++#~ "{imagemonth}\t\t\t02\n"
++#~ "{imagemonthname}\t\tfévrier\n"
++#~ "{imagemonthsimp}\t\tfeb\n"
++#~ "{imageday}\t\t\t\t22\n"
++#~ "{imagedayname}\t\tvendredi\n"
++#~ "{imagedaysimp}\t\tfri\n"
++#~ "{imagetime}\t\t\t13_56_02\n"
++#~ "{imagehour}\t\t\t13\n"
++#~ "{imageminute}\t\t\t56\n"
++#~ "{imagesecond}\t\t\t02\n"
++#~ "\n"
++#~ "Substitutions générales:\n"
++#~ "Utilisez {1} pour le premier segment. {2} pour le second, etc...\n"
++#~ "Utilisez {num} pour ajouter 1, 2, 3... aux noms des fichiers\n"
++#~ "Utilisez {num2} pour 01, 02, 03.....\n"
++#~ "Utilisez {num3} pour 001, 002, 003...\n"
++#~ "Utilisez {num+10} pour 10, 11, 12...\n"
++#~ "Utilsez {num2+10} pour 010, 011, 012...\n"
++#~ "Utilisez {dir} pour obtenir le dossier actuel\n"
++#~ "\n"
++#~ "Quelques substitutions avec la date actuelle:\n"
++#~ "{date}\t\t\t22feb1980\n"
++#~ "{year}\t\t\t1980\n"
++#~ "{month}\t\t02\n"
++#~ "{monthname}\tfévrier\n"
++#~ "{monthsimp}\tfév\n"
++#~ "{day}\t\t\t22\n"
++#~ "{dayname}\t\tvendredi\n"
++#~ "{daysimp}\t\tven\n"
++#~ "\n"
++#~ "Substitutions aléatoires de nombres:\n"
++#~ "{rand} est un nombre aléatoire entre 0 et 100.\n"
++#~ "{rand,3} est un nombre aléatoire entre 0 et 100 de 3 chiffres (012)\n"
++#~ "{rand500} est un nombre aléatoire entre 0 et 500\n"
++#~ "{rand10-20} est un nombre aléatoire entre 0 et 20\n"
++#~ "{rand20,5} est un nombre aléatoire entre 0 et 20 de 5 chiffres (00012)"
++
++#~ msgid "Images"
++#~ msgstr "Images"
++
++#~ msgid "Music"
++#~ msgstr "Musique"
++
++#~ msgid ""
++#~ "Music metadata replacements:\n"
++#~ "{artist}\t\tAnxiA\n"
++#~ "{title}\t\tEl mundo no es una mercancía\n"
++#~ "{album}\tJóven pájaro negro muerto\n"
++#~ "{track}\t\t02\n"
++#~ "{tracktotal}\t10\n"
++#~ "{myear}\t2006\n"
++#~ "{genre}\tHardcore\n"
++#~ "\n"
++#~ "Common replacements:\n"
++#~ "Use {1} for first catched item. {2} for second, etc...\n"
++#~ "Use {num} for adding 1, 2, 3... to file names\n"
++#~ "Use {num2} for 01, 02, 03.....\n"
++#~ "Use {num3} for 001, 002, 003...\n"
++#~ "Use {num+10} for 10, 11, 12...\n"
++#~ "Use {num2+10} for 010, 011, 012...\n"
++#~ "Use {dir} for getting current dir\n"
++#~ "\n"
++#~ "Some today date replacements:\n"
++#~ "{date}\t\t\t22feb1980\n"
++#~ "{year}\t\t\t1980\n"
++#~ "{month}\t\t02\n"
++#~ "{monthname}\tfebruary\n"
++#~ "{monthsimp}\tfeb\n"
++#~ "{day}\t\t\t22\n"
++#~ "{dayname}\t\tfriday\n"
++#~ "{daysimp}\t\tfri\n"
++#~ "\n"
++#~ "Random number replacements:\n"
++#~ "{rand} is random number between 0 and 100.\n"
++#~ "{rand,3} is random number between 0 and 100 of 3 digits (012)\n"
++#~ "{rand500} is random number between 0 and 500\n"
++#~ "{rand10-20} is random number between 10 and 20\n"
++#~ "{rand20,5} is random number between 0 and 20 of 5 digits (00012)"
++#~ msgstr ""
++#~ "Substitutions par les métadonnées de la musique:\n"
++#~ "{artist}\t\tAnxiA\n"
++#~ "{title}\t\tEl mundo no es una mercancía\n"
++#~ "{album}\tJóven pájaro negro muerto\n"
++#~ "{track}\t\t02\n"
++#~ "{tracktotal}\t10\n"
++#~ "{year}\t\t2006\n"
++#~ "{genre}\tHardcore\n"
++#~ "\n"
++#~ "Substitutions générales:\n"
++#~ "Utilisez {1} pour le premier segment. {2} pour le second, etc...\n"
++#~ "Utilisez {num} pour ajouter 1, 2, 3... aux noms des fichiers\n"
++#~ "Utilisez {num2} pour 01, 02, 03.....\n"
++#~ "Utilisez {num3} pour 001, 002, 003...\n"
++#~ "Utilisez {num+10} pour 10, 11, 12...\n"
++#~ "Utilsez {num2+10} pour 010, 011, 012...\n"
++#~ "Utilisez {dir} pour obtenir le dossier actuel\n"
++#~ "\n"
++#~ "Quelques substitutions avec la date actuelle:\n"
++#~ "{date}\t\t\t22feb1980\n"
++#~ "{year}\t\t\t1980\n"
++#~ "{month}\t\t02\n"
++#~ "{monthname}\tfévrier\n"
++#~ "{monthsimp}\tfév\n"
++#~ "{day}\t\t\t22\n"
++#~ "{dayname}\t\tvendredi\n"
++#~ "{daysimp}\t\tven\n"
++#~ "Substitutions aléatoires de nombres:\n"
++#~ "{rand} est un nombre aléatoire entre 0 et 100.\n"
++#~ "{rand,3} est un nombre aléatoire entre 0 et 100 de 3 chiffres (012)\n"
++#~ "{rand500} est un nombre aléatoire entre 0 et 500\n"
++#~ "{rand10-20} est un nombre aléatoire entre 0 et 20\n"
++#~ "{rand20,5} est un nombre aléatoire entre 0 et 20 de 5 chiffres (00012)"
++
++#~ msgid "Root"
++#~ msgstr "Racine"
++
++#~ msgid ""
++#~ "Spaces to Underscores\n"
++#~ "Underscores to Spaces\n"
++#~ "Spaces to Dots\n"
++#~ "Dots to Spaces\n"
++#~ "Spaces to Dashes\n"
++#~ "Dashes to Spaces"
++#~ msgstr ""
++#~ "Espaces en tirets bas\n"
++#~ "Tirets bas en espaces\n"
++#~ "Espaces en points\n"
++#~ "Points en espaces\n"
++#~ "Espaces en tirets\n"
++#~ "Tirets en espaces"
++
++#~ msgid ""
++#~ "{#}\tNumbers\n"
++#~ "{L}\t\tLetters\n"
++#~ "{C}\t\tCharacters (numbers and letters, not spaces)\n"
++#~ "{X}\t\tNumbers, letters, and spaces\n"
++#~ "{@}\tTrash"
++#~ msgstr ""
++#~ "{#}\tChiffres\n"
++#~ "{L}\t\tLettres\n"
++#~ "{C}\tCaractères (chiffres et lettres, pas d'espaces)\n"
++#~ "{X}\t\tChiffres, lettres et espaces\n"
++#~ "{@}\tCorbeille "
++
++#~ msgid ""
++#~ "0: Rename files / 1: Rename directories / 2: Rename files and directories"
++#~ msgstr ""
++#~ "0: Renommer les fichiers / 1: Renommer les répertoires / 2: Renommer les "
++#~ "fichiers et répertoires"
++
++#~ msgid "Auto preview changes"
++#~ msgstr "Aperçu automatique des changements"
++
++#~ msgid "Default active dir"
++#~ msgstr "Répertoire actif par défaut"
++
++#~ msgid "Default root dir"
++#~ msgstr "Répertoire racine par défaut"
++
++#~ msgid "Display the options pane"
++#~ msgstr "Montrer le panneau d'options"
++
++#~ msgid "Is the window maximized?"
++#~ msgstr "La fenêtre est-elle maximisée?"
++
++#~ msgid "Keep files extensions"
++#~ msgstr "Garder les extensions des fichiers"
++
++#~ msgid "Position of the pane separator"
++#~ msgstr "Position du séparateur du panneau"
++
++#~ msgid "Window height"
++#~ msgstr "Hauteur de la fenêtre"
++
++#~ msgid "Window width"
++#~ msgstr "Largeur de la fenêtre"
++
++#~ msgid "X position of the window"
++#~ msgstr "Position X de la fenêtre"
++
++#~ msgid "Y position of the window"
++#~ msgstr "Position Y de la fenêtre"
++
++#~ msgid "Original file name"
++#~ msgstr "Nom de fichier original"
++
++#~ msgid "Renamed file name"
++#~ msgstr "Nouveau nom de fichier"
++
++#~ msgid "Mass file renamer for GNOME"
++#~ msgstr "Renommage en masse de fichiers pour GNOME"
++
++#, python-format
++#~ msgid ""
++#~ "<b>Original: </b> %s\n"
++#~ "<b>Renamed: </b> %s"
++#~ msgstr ""
++#~ "<b>Original: </b> %s\n"
++#~ "<b>Renommé: </b> %s"
++
++#, python-format
++#~ msgid "<b>Original: </b> %s"
++#~ msgstr "<b>Original: </b> %s"
+diff --git a/pyrenamer/gui/pattern_editor.py b/pyrenamer/gui/pattern_editor.py
+index 3348931..ae83e9f 100644
+--- a/pyrenamer/gui/pattern_editor.py
++++ b/pyrenamer/gui/pattern_editor.py
+@@ -119,6 +119,7 @@ class PyrenamerPatternEditor:
+         # Create the window
+         gui_objects=['pattern_edit_window', 'pattern_edit_treeview']
+         self.builder = Gtk.Builder()
++        self.builder.set_translation_domain("pyrenamer")
+         self.builder.add_objects_from_file(self.glade_file, gui_objects)
+ 
+         # Signals
+diff --git a/pyrenamer/gui/preferences.py b/pyrenamer/gui/preferences.py
+index 2c9cf33..fb2cafe 100644
+--- a/pyrenamer/gui/preferences.py
++++ b/pyrenamer/gui/preferences.py
+@@ -63,6 +63,7 @@ class Preferences:
+             'prefs_close'
+             ]
+         self.builder = Gtk.Builder()
++        self.builder.set_translation_domain("pyrenamer")
+         self.builder.add_objects_from_file(glade_file, gui_objects)
+ 
+         # Signals
+diff --git a/pyrenamer/pyrenamer.py b/pyrenamer/pyrenamer.py
+index c383612..b52d32a 100755
+--- a/pyrenamer/pyrenamer.py
++++ b/pyrenamer/pyrenamer.py
+@@ -54,8 +54,20 @@ from os import path as ospath
+ from os.path import dirname
+ import locale
+ import gettext
+-from gettext import gettext as _
+ 
++APP = "pyrenamer"
++LOCALE_DIR = "/usr/local/share/locale"
++
++try:
++    locale.setlocale(locale.LC_ALL, "")
++except locale.Error:
++    pass
++
++gettext.bindtextdomain(APP, LOCALE_DIR)
++gettext.textdomain(APP)
++gettext.install(APP, LOCALE_DIR)
++
++_ = gettext.gettext
+ 
+ # Local Imports
+ from gui import preferences
+@@ -152,6 +164,7 @@ class pyRenamer:
+         ]
+ 
+         self.builder = Gtk.Builder()
++        self.builder.set_translation_domain("pyrenamer")
+         self.builder.add_objects_from_file(self.glade_file, gui_objects)
+         self.initialize_defaults()
+         if root_dir != None:
+@@ -262,6 +275,7 @@ class pyRenamer:
+         # Init main window
+         self.builder.get_object("main_window").set_title("pyRenamer")
+         self.builder.get_object("main_window").set_icon_from_file(self.icon)
++        self.builder.get_object("main_window").maximize()
+ 
+         # Init TreeFileBrowser
+         self.file_browser = treefilebrowser.TreeFileBrowser(self.root_dir)
+@@ -346,12 +360,12 @@ class pyRenamer:
+         # self.selected_files.append_column(column0)
+ 
+         renderer0 = Gtk.CellRendererText()
+-        column0 = Gtk.TreeViewColumn("Original File Name", renderer0, text=0)
++        column0 = Gtk.TreeViewColumn("Nom du fichier d'origine", renderer0, text=0)
+         column0.set_resizable(True)
+         self.selected_files.append_column(column0)
+ 
+         renderer1 = Gtk.CellRendererText()
+-        column1 = Gtk.TreeViewColumn("Renamed File Name", renderer1, text=2)
++        column1 = Gtk.TreeViewColumn("Nom du fichier renommé", renderer1, text=2)
+         column1.set_resizable(True)
+         self.column_preview = column1
+         self.selected_files.append_column(column1)
+@@ -580,7 +594,6 @@ class pyRenamer:
+         if event.changed_mask & Gdk.WindowState.MAXIMIZED:
+             if event.new_window_state & Gdk.WindowState.MAXIMIZED:
+                 self.window_maximized = True
+-                self.builder.get_object("main_window").set_has_resize_grip(False)
+             else:
+                 self.window_maximized = False
+                 self.builder.get_object("main_window").set_has_resize_grip(True)
+@@ -1173,8 +1186,9 @@ class pyRenamer:
+                 self.listing_thread.join()
+ 
+         self.stop_button.hide()
+-        for i in self.populate_id:
+-            removed = GLib.source_remove(i)
++        for i in self.populate_id[:]:
++            if GLib.main_context_default().find_source_by_id(i) is not None:
++                GLib.source_remove(i)
+             self.populate_id.remove(i)
+ 
+             self.selected_files.set_model(self.file_selected_model)
+diff --git a/pyrenamer/tools/filetools.py b/pyrenamer/tools/filetools.py
+index 9d2d8dc..2b404a0 100644
+--- a/pyrenamer/tools/filetools.py
++++ b/pyrenamer/tools/filetools.py
+@@ -259,16 +259,16 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
+     pattern = pattern_ini
+     newname = pattern_end
+ 
+-    pattern = pattern.replace(".", "\.")
+-    pattern = pattern.replace("[", "\[")
+-    pattern = pattern.replace("]", "\]")
+-    pattern = pattern.replace("(", "\(")
+-    pattern = pattern.replace(")", "\)")
+-    pattern = pattern.replace("?", "\?")
++    pattern = pattern.replace(".", r"\.")
++    pattern = pattern.replace("[", r"\[")
++    pattern = pattern.replace("]", r"\]")
++    pattern = pattern.replace("(", r"\(")
++    pattern = pattern.replace(")", r"\)")
++    pattern = pattern.replace("?", r"\?")
+     pattern = pattern.replace("{#}", "([0-9]*)")
+     pattern = pattern.replace("{L}", "([a-zA-Z]*)")
+-    pattern = pattern.replace("{C}", "([\S]*)")
+-    pattern = pattern.replace("{X}", "([\S\s]*)")
++    pattern = pattern.replace("{C}", r"([\S]*)")
++    pattern = pattern.replace("{X}", r"([\S\s]*)")
+     pattern = pattern.replace("{@}", "(.*)")
+ 
+     try:
+@@ -289,7 +289,7 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
+     # If {num2} the number will be 02
+     # If {num3+10} the number will be 010
+     count = repr(count)
+-    cr = re.compile("{(num)([0-9]*)}|{(num)([0-9]*)(\+)([0-9]*)}")
++    cr = re.compile(r"{(num)([0-9]*)}|{(num)([0-9]*)(\+)([0-9]*)}")
+     try:
+         cg = cr.search(newname).groups()
+         if len(cg) == 6:
+@@ -387,10 +387,10 @@ def rename_using_patterns(name, path, pattern_ini, pattern_end, count, ext=""):
+     # ie. {rand20,5} will be a number between 0 and 20 of 5 digits (00012)
+     rnd = ""
+     cr = re.compile(
+-        "{(rand)([0-9]*)}"
+-        "|{(rand)([0-9]*)(\-)([0-9]*)}"
+-        "|{(rand)([0-9]*)(\,)([0-9]*)}"
+-        "|{(rand)([0-9]*)(\-)([0-9]*)(\,)([0-9]*)}"
++        r"{(rand)([0-9]*)}"
++        r"|{(rand)([0-9]*)(\-)([0-9]*)}"
++        r"|{(rand)([0-9]*)(\,)([0-9]*)}"
++        r"|{(rand)([0-9]*)(\-)([0-9]*)(\,)([0-9]*)}"
+     )
+     try:
+         cg = cr.search(newname).groups()

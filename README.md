@@ -3,6 +3,7 @@
 pyRenamer is an application with a graphic interface designed for renaming many files at once. It supports renaming files with patterns, substitutions, inserting text, deleting text, or even manually renaming individual files. 
 
 ![screenshot](screenshots/screenshot.png)
+![pyRenamer French UI](screenshots/pyrenamer-fr-ubuntu2404.png)
 
 ## Features
 
